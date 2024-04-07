@@ -118,6 +118,12 @@ export const constantRoutes = [
         component: () => import('@/views/lesson/index'),
         name: '我的课程',
         meta: { title: '我的课程', icon: 'guide', noCache: true }
+      },
+      {
+        path: '/lessonDetail',
+        name: '我的课程2',
+        component: () => import('@/views/lesson/lesson'),
+        hidden: true
       }
     ]
   },
@@ -401,11 +407,12 @@ export const asyncRoutes = [
   { path: '*', redirect: '/404', hidden: true }
 ]
 
-const createRouter = () => new Router({
-  // mode: 'history', // require service support
-  scrollBehavior: () => ({ y: 0 }),
-  routes: constantRoutes
-})
+const createRouter = () =>
+  new Router({
+    // mode: 'history', // require service support
+    scrollBehavior: () => ({ y: 0 }),
+    routes: constantRoutes
+  })
 
 const router = createRouter()
 

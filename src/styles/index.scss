@@ -295,3 +295,36 @@ background: linear-gradient(90deg, rgba(77,96,229,1) 31%, rgba(107,123,231,1) 10
   display: inline-block;
   margin-right: 10px;
 }
+.cardLess{
+  cursor: pointer;
+  
+}
+.cardLess:hover{
+  box-shadow: 0 0 20px #1890ff;
+  border:4px solid #fff
+
+}
+.lessonDetail{
+  padding: 15px 25px;
+  margin: 20px;
+  border: 1px solid #eee;
+  min-height: 500px;
+}
+ul,li{
+  list-style: none;
+}
+.listLess{
+  line-height: 65px;
+  height: 65px;
+  border-left: 2px solid #1890ff;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #e8e8e8;
+  padding-left: 25px;
+  margin-top: 15px;
+}
+.lujin{
+  margin: 20px;
+}
