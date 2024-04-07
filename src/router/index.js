@@ -109,14 +109,14 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/guide',
+    path: '/lesson',
     component: Layout,
-    redirect: '/guide/index',
+    redirect: '/lesson/index',
     children: [
       {
         path: 'index',
-        component: () => import('@/views/guide/index'),
-        name: 'Guide',
+        component: () => import('@/views/lesson/index'),
+        name: '我的课程',
         meta: { title: '我的课程', icon: 'guide', noCache: true }
       }
     ]

@@ -1,16 +1,17 @@
-@import './variables.scss';
-@import './mixin.scss';
-@import './transition.scss';
-@import './element-ui.scss';
-@import './sidebar.scss';
-@import './btn.scss';
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./transition.scss";
+@import "./element-ui.scss";
+@import "./sidebar.scss";
+@import "./btn.scss";
 
 body {
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
 }
 
 label {
@@ -104,7 +105,8 @@ aside {
   display: block;
   line-height: 32px;
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #2c3e50;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -134,7 +136,7 @@ aside {
 }
 
 .text-center {
-  text-align: center
+  text-align: center;
 }
 
 .sub-navbar {
@@ -145,7 +147,13 @@ aside {
   text-align: right;
   padding-right: 20px;
   transition: 600ms ease position;
-  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(32, 182, 249, 1) 0%,
+    rgba(32, 182, 249, 1) 0%,
+    rgba(33, 120, 241, 1) 100%,
+    rgba(33, 120, 241, 1) 100%
+  );
 
   .subtitle {
     font-size: 20px;
@@ -189,7 +197,7 @@ aside {
 .multiselect--active {
   z-index: 1000 !important;
 }
-.hamburger-container{
+.hamburger-container {
   display: none;
 }
 .el-menu-item {
@@ -198,10 +206,10 @@ aside {
   // border-radius: 10px;
   height: 56px;
   line-height: 56px;
-  // margin-top: 10px; 
+  // margin-top: 10px;
   margin-left: 20px;
   font-size: 14px;
-  color: #1a1a1a!important;
+  color: #1a1a1a !important;
   padding: 0 20px;
   list-style: none;
   cursor: pointer;
@@ -211,23 +219,79 @@ aside {
   // width: 170px;
   // border-radius: 10px;
 }
-.el-menu{
+.el-menu {
   padding-top: 40px;
   position: relative;
 }
-.el-menu::after{
+.el-menu::after {
   top: 20px;
   position: absolute;
-  content: '';
-  border-radius: 10px!important;;
-  border: 1px solid #eef1f6!important;;
+  content: "";
+  border-radius: 10px !important;
+  border: 1px solid #eef1f6 !important;
   width: 140px;
   height: 100%;
   left: 20px;
-  pointer-events:none;
+  pointer-events: none;
   // z-index: -1;
 }
-.is-active{
-  color: #ffffff!important;
-  background-color: #3b87ea!important;
+.is-active {
+  color: #ffffff !important;
+  background-color: #3b87ea !important;
+}
+.handle-button {
+  display: none;
+}
+.chartwrapper {
+  min-height: 240px;
+  width: 100%;
+  color: #fff;
+  padding: 10px 20px;
+}
+.box1 {
+  background: rgb(81, 156, 236);
+  background: linear-gradient(
+    90deg,
+    rgba(81, 156, 236, 1) 31%,
+    rgba(116, 184, 241, 1) 100%
+  );
+}
+.box2 {
+  background: rgb(238,161,67);
+  background: linear-gradient(90deg, rgba(238,161,67,1) 31%, rgba(238,174,91,1) 100%);
+}
+.box3 {
+  background: rgb(77,96,229);
+background: linear-gradient(90deg, rgba(77,96,229,1) 31%, rgba(107,123,231,1) 100%);
+}
+.tags-view-container .tags-view-wrapper .tags-view-item.active {
+  background-color: #5fa7ee!important;
+  color: #fff; 
+  border-color: #ffffff!important;
+}
+.el-scrollbar__view{}
+.mainContent{
+  padding-right: 320px;
+  position: relative;
+}
+.tabBox{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+}
+.el-tabs__item.is-active {
+  background-color: #ffffff00!important;
+  color: #1890ff!important;
+}
+.el-timeline-item__tail {
+  position: absolute;
+  left: 4px;
+  height: 125%!important;
+  border-left: 2px solid #dfe4ed;
+}
+.testCard{
+  width: 25%;
+  display: inline-block;
+  margin-right: 10px;
 }
