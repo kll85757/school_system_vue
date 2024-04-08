@@ -26,7 +26,7 @@
                 <h3>第二学期</h3>
                 <span>无线网络技术</span>
                 <div class="bottom clearfix">
-                  <time class="time">{{ currentDate }}</time>
+                  <!-- <time class="time">{{ currentDate }}</time> -->
                   <el-button type="text" class="button">授课 ： 张老师</el-button>
                 </div>
               </div>

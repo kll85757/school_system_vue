@@ -86,7 +86,8 @@ export default {
   data() {
     return {
       activeName: 'first',
-      url: '@/assets/pdf.pdf',
+      // url: '@/assets/pdf.pdf',
+      url: 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf',
       url2: 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf',
       url3: 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf'
     }

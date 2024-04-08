@@ -65,7 +65,7 @@
         <p>关联学期：23级第二学期</p>
         <div>
           <el-button round type="primary" class="button">已结束</el-button>
-          <el-button round type="text" class="button">尚未提交试卷</el-button>
+          <el-button round type="text" class="button"><span style="font-weight: 600;">72</span>分</el-button>
 
         </div>
 

@@ -123,6 +123,7 @@ export const constantRoutes = [
         path: '/lessonDetail',
         name: '我的课程2',
         component: () => import('@/views/lesson/lesson'),
+        meta: { title: '课程详细', icon: 'guide', noCache: true },
         hidden: true
       }
     ]
