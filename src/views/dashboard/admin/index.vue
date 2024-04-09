@@ -11,7 +11,7 @@
     <div class="mainContent">
       <el-row :gutter="32">
         <el-col :xs="24" :sm="12" :lg="8">
-          <div class="chartwrapper box1">
+          <div class="chartwrapper box1" @click="toPage3">
             <div>
               <h3>进入上次实验章节</h3>
               <br>
@@ -22,19 +22,23 @@
           </div>
         </el-col>
         <el-col :xs="24" :sm="12" :lg="8">
-          <div class="chartwrapper box2">
+          <div class="chartwrapper box2" @click="toPage2">
             <h3>我的成绩</h3>
             <br>
             <h3>成绩暂未公布</h3>
             <p><el-button round>查看成绩</el-button></p>
+            <img :src="l1" class="BgPic">
+
             <!-- <pie-chart /> -->
           </div>
         </el-col>
         <el-col :xs="24" :sm="12" :lg="8">
-          <div class="chartwrapper box3">
+          <div class="chartwrapper box3" @click="toPage1">
             <h3>我的考试</h3>
             <br>
             <h3>暂无考试</h3>
+            <img :src="l2" class="BgPic">
+
             <!-- <p>无线网络技术</p> -->
             <!-- <bar-chart /> -->
           </div>
@@ -65,7 +69,22 @@
 
       <div class="tabBox">
         <el-tabs v-model="activeName" stretch="true" @tab-click="handleClick">
-          <el-tab-pane label="基础课程" name="first">基础课程</el-tab-pane>
+          <el-tab-pane label="基础课程" name="first">
+            <el-card :body-style="{ padding: '0px', height: '300px' }">
+              <img style="width: 100%;" src="@/assets/lesson1.png" class="image">
+              <div style="padding: 14px">
+                <span>IPV6详解</span>
+                <br>
+                <br>
+                <div class="bottom clearfix">
+                  <!-- <time class="time">{{ currentDate }}</time> -->
+                  <el-button round class="button">12章节</el-button>
+                  <el-button round type="primary" class="button">5课时</el-button>
+                  <el-button round type="warning" class="button">张老师</el-button>
+                </div>
+              </div>
+            </el-card>
+          </el-tab-pane>
           <el-tab-pane label="核心课程" name="second">
             <el-card :body-style="{ padding: '0px', height: '300px' }">
               <img style="width: 100%;" src="@/assets/lesson1.png" class="image">
@@ -76,13 +95,28 @@
                 <div class="bottom clearfix">
                   <!-- <time class="time">{{ currentDate }}</time> -->
                   <el-button round class="button">18章节</el-button>
-                  <el-button round type="primary" class="button">52课时</el-button>
+                  <el-button round type="primary" class="button">2课时</el-button>
                   <el-button round type="warning" class="button">老师</el-button>
                 </div>
               </div>
             </el-card>
           </el-tab-pane>
-          <el-tab-pane label="实训案例" name="third">实训案例</el-tab-pane>
+          <el-tab-pane label="实训案例" name="third">
+            <el-card :body-style="{ padding: '0px', height: '300px' }">
+              <img style="width: 100%;" src="@/assets/lesson1.png" class="image">
+              <div style="padding: 14px">
+                <span>路由交换上机操作</span>
+                <br>
+                <br>
+                <div class="bottom clearfix">
+                  <!-- <time class="time">{{ currentDate }}</time> -->
+                  <el-button round class="button">18章节</el-button>
+                  <el-button round type="primary" class="button">5课时</el-button>
+                  <el-button round type="warning" class="button">王老师</el-button>
+                </div>
+              </div>
+            </el-card>
+          </el-tab-pane>
         </el-tabs>
       </div>
     </div>
@@ -111,6 +145,9 @@
 // import TransactionTable from './components/TransactionTable'
 // import TodoList from './components/TodoList'
 // import BoxCard from './components/BoxCard'
+import l1 from '@/assets/l1.png'
+import l2 from '@/assets/l2.png'
+// eslint-disable-next-line no-unused-vars
 
 const lineChartData = {
   newVisitis: {
@@ -146,6 +183,8 @@ export default {
   },
   data() {
     return {
+      l1: l1 + '?' + +new Date(),
+      l2: l2 + '?' + +new Date(),
       lineChartData: lineChartData.newVisitis,
       activeName: 'second'
     }
@@ -156,7 +195,17 @@ export default {
     },
     handleClick(tab, event) {
       console.log(tab, event)
+    },
+    toPage1() {
+      this.$router.push('/documentation/index')
+    },
+    toPage2() {
+      this.$router.push('/guide/index')
+    },
+    toPage3() {
+      this.$router.push('/lesson/index')
     }
+
   }
 }
 </script>

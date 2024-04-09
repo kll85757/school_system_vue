@@ -310,6 +310,30 @@ background: linear-gradient(90deg, rgba(77,96,229,1) 31%, rgba(107,123,231,1) 10
   border: 1px solid #eee;
   min-height: 500px;
 }
+.lessonDoc{
+  padding: 15px 25px;
+  // margin: 20px;
+  min-height: 500px;
+  position: relative;
+  padding-left: 300px;
+  padding-top: 65px;
+}
+.grid-content{
+  font-weight: 600;
+}
+.docMenu{
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  top: 10px;
+  left: 30px;
+}
+.treeDoc{
+  position: absolute;
+  left: 20px;
+  width: 400px;
+}
 ul,li{
   list-style: none;
 }
@@ -327,4 +351,13 @@ ul,li{
 }
 .lujin{
   margin: 20px;
+}
+.chartwrapper{
+  position: relative;
+}
+.BgPic{
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  width: 100px;
 }

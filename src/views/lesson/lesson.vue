@@ -20,7 +20,7 @@
                     <div class="grid-content bg-purple">实验报告：未提交</div>
                   </el-col>
                   <el-col :span="3">
-                    <el-button type="primary">查看详情</el-button>
+                    <el-button type="primary" @click="toDoc">查看详情</el-button>
                   </el-col>
                 </el-row>
               </div>
@@ -39,7 +39,7 @@
                     <div class="grid-content bg-purple">实验报告：未提交</div>
                   </el-col>
                   <el-col :span="3">
-                    <el-button type="primary">查看详情</el-button>
+                    <el-button type="primary" @click="toDoc">查看详情</el-button>
                   </el-col>
                 </el-row>
               </div>
@@ -58,7 +58,7 @@
                     <div class="grid-content bg-purple">实验报告：未提交</div>
                   </el-col>
                   <el-col :span="3">
-                    <el-button type="primary">查看详情</el-button>
+                    <el-button type="primary" @click="toDoc">查看详情</el-button>
                   </el-col>
                 </el-row>
               </div>
@@ -66,7 +66,10 @@
           </ul>
         </div>
       </el-tab-pane>
-      <el-tab-pane label="授课计划" name="second">配置管理</el-tab-pane>
+      <el-tab-pane label="授课计划" name="second">
+        <PDFViewer :source="url2" style="height: 100vh; width: 100vw" @download="handleDownload" />
+
+      </el-tab-pane>
       <el-tab-pane label="课程标砖" name="third">
         <!-- <pdf ref="pdf" :src="url">
         </pdf> -->
@@ -88,13 +91,17 @@ export default {
       activeName: 'first',
       // url: '@/assets/pdf.pdf',
       url: 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf',
-      url2: 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf',
+      url2: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
       url3: 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf'
     }
   },
   methods: {
     handleClick(tab, event) {
       console.log(tab, event)
+    },
+    toDoc(docName) {
+      console.log(docName)
+      this.$router.push('/lessondoc')
     },
     handleDownload() {
       console.log(11)
