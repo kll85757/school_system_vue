@@ -361,3 +361,7 @@ ul,li{
   right: 10px;
   width: 100px;
 }
+.pdf-container {
+  height: 100vh; /* 占据整个视口高度 */
+  width: 100%; /* 占据整个视口宽度 */
+}

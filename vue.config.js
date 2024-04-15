@@ -30,6 +30,15 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   devServer: {
+    proxy: {
+      '/pdf': {
+        target: 'http://storage.xuetangx.com',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/pdf': ''
+        }
+      }
+    },
     port: port,
     open: true,
     overlay: {
