@@ -98,10 +98,12 @@
 // import PDFViewer from 'pdf-viewer-vue/dist/vue2-pdf-viewer'
 // import VuePdfApp from 'vue-pdf-app'
 // import this to use default icons for buttons
+import pdf1 from './pdfs/pdf1.vue'
 import 'vue-pdf-app/dist/icons/main.css'
 
 export default {
   components: {
+    pdf1
   },
   data() {
     return {
@@ -125,7 +127,7 @@ export default {
         this.showPDF2 = true
         setTimeout(() => {
           window.dispatchEvent(new Event('resize')) // 强制触发窗口大小改变事件
-        }, 1000)
+        }, 10)
       })
     },
     handleClick(tab, event) {
@@ -137,7 +139,7 @@ export default {
         this.showPDF2 = true
         setTimeout(() => {
           window.dispatchEvent(new Event('resize')) // 强制触发窗口大小改变事件
-        }, 1000)
+        }, 10)
       })
     },
     toDoc(docName) {

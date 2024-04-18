@@ -315,7 +315,7 @@ background: linear-gradient(90deg, rgba(77,96,229,1) 31%, rgba(107,123,231,1) 10
   // margin: 20px;
   min-height: 500px;
   position: relative;
-  padding-left: 300px;
+  // padding-left: 300px;
   padding-top: 65px;
 }
 .grid-content{
@@ -326,13 +326,17 @@ background: linear-gradient(90deg, rgba(77,96,229,1) 31%, rgba(107,123,231,1) 10
   width: 100%;
   height: 45px;
   line-height: 45px;
-  top: 10px;
-  left: 30px;
+  top: 0;
+  left: 0;
+  // left: 30px;
 }
 .treeDoc{
-  position: absolute;
+  position: fixed;
   left: 20px;
-  width: 400px;
+  width: 220px;
+  z-index: 9999;
+  height: 1400px;
+  background-color: #fff;
 }
 ul,li{
   list-style: none;
@@ -364,4 +368,26 @@ ul,li{
 .pdf-container {
   height: 100vh; /* 占据整个视口高度 */
   width: 100%; /* 占据整个视口宽度 */
+}
+.treeDoc::after{
+  content: '';
+  height: 1000px;
+  position: fixed;
+  width: 1px;
+  background-color: #dcdcdc;
+  top: 0;
+  left: 250px;
+  display: none;
+}
+.scroller.catalog.visible {
+  display: none!important;
+}
+.pdf-viewer-container .pdf-thumbnails-container {
+  display: none;
+}
+.visible{
+  display: none;
+}
+.docMenu{
+  background-color: #1890ff;
 }
