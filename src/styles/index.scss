@@ -330,6 +330,9 @@ background: linear-gradient(90deg, rgba(77,96,229,1) 31%, rgba(107,123,231,1) 10
   left: 0;
   // left: 30px;
 }
+.pdfView{
+  position: fixed;
+}
 .treeDoc{
   position: fixed;
   left: 20px;
@@ -390,4 +393,10 @@ ul,li{
 }
 .docMenu{
   background-color: #1890ff;
+}
+.pdf-viewer--download{
+  display: none;
+}
+.pdf-viewer--printer{
+  display: none;
 }

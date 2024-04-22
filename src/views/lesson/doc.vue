@@ -149,7 +149,7 @@ export default {
             this.show03 = false
             setTimeout(() => {
               window.dispatchEvent(new Event('resize')) // 强制触发窗口大小改变事件
-            }, 1000)
+            }, 10)
           })
 
           break
@@ -163,7 +163,7 @@ export default {
             this.show03 = false
             setTimeout(() => {
               window.dispatchEvent(new Event('resize')) // 强制触发窗口大小改变事件
-            }, 1000)
+            }, 10)
           })
           break
         case '教学视频':
@@ -193,7 +193,7 @@ export default {
             this.show03 = false
             setTimeout(() => {
               window.dispatchEvent(new Event('resize')) // 强制触发窗口大小改变事件
-            }, 100)
+            }, 10)
           })
           break
       }
